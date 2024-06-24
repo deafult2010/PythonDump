@@ -65,7 +65,8 @@ print('df size: %2.2f MB'%size)
 
 # rnkArray = rankdata(dotArray,axis=1)
 # reverse rank
-rnkArray = rankdata([-1*i for i in dotArray],axis=1)
+# rnkArray = rankdata([-1*i for i in dotArray],axis=1)
+rnkArray = len(dotArray[0]) - rankdata(dotArray,axis=1)
 print(rnkArray)
 
 probRnkArray = rnkArray * prodArray2
